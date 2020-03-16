@@ -5,5 +5,5 @@ steps:
       args:
         - '-c'
         - |
-            -m pip install -r /workspace/requirements.txt\
+            pip install -r /workspace/requirements.txt\
             && python3 /workspace/practice1.py
