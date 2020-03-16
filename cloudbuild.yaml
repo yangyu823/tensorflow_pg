@@ -1,0 +1,7 @@
+steps:
+    - name: 'docker.io/library/python:3.7'
+      id: INSTALL
+      entrypoint: 'venv/bin/python'
+      args:
+          - 'pip install -r reuqirments.txt'
+          - 'python3 practice1.py'
