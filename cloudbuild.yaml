@@ -3,7 +3,11 @@ steps:
       id: INSTALL
       entrypoint: python3
       args:
-        - 'pip install -r /workspace/requirements.txt'
+        - '-m'
+        - 'pip'
+        - 'install'
+        - '-r'
+        - '/workspace/requirements.txt'
 
     - name: 'docker.io/library/python:3.7'
       id: RUN
@@ -11,4 +15,4 @@ steps:
       waitFor:
           - INSTALL
       args:
-        - 'python3 /workspace/practice1.py'
+        - '/workspace/practice1.py'
