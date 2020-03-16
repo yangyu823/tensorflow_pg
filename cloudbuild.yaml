@@ -7,3 +7,5 @@ steps:
         - |
             pip install -r /workspace/requirements.txt\
             && python3 /workspace/practice1.py
+options:
+    machineType: 'N1_HIGHCPU_32'
