@@ -1,14 +1,14 @@
 steps:
     - name: 'docker.io/library/python:3.7'
       id: INSTALL
-      entrypoint: python3
+    #   entrypoint: python3
       args:
-        - 'pip install -r reuqirments.txt'
+        - 'pip install -r /workspace/reuqirments.txt'
 
     - name: 'docker.io/library/python:3.7'
       id: RUN
-      entrypoint: python3
+    #   entrypoint: python3
       waitFor:
           - INSTALL
       args:
-        - 'python3 practice1.py'
+        - 'python3 /workspace/practice1.py'
