@@ -1,17 +1,6 @@
 tags:
 - "tensorflow_pg"
 steps:
-- id: "fetch code"
-  name: 'gcr.io/cloud-builders/git'
-  entrypoint: bash
-  args:
-  - '-c'
-  - |
-    pwd
-    ls -al
-    git fetch --tag
-    git fetch origin
-
 - id: "run code"
   name: 'docker.io/library/python:3.7'
   entrypoint: bash
